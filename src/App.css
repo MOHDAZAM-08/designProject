@@ -1,38 +1,334 @@
-.App {
-  text-align: center;
-}
+/* navbar */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar {
+    background-color: transparent;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .navbar.active {
+    background-color: #1c9ffce8;
+    color: #ffffff;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .navbar-brand {
+    margin-left: 30px;
+    font-weight: bold;
+    color: #fb8504;
+    font-size: 32px;
+    text-align: center;
   }
+  
+  .navbar-brand:hover {
+    color: #fb8504;
+  
+  }
+  
+  
+  .navbar .navbar-collapse {
+    margin-right: 20%;
+  }
+  
+  .navbar .navbar-collapse .nav-item {
+    padding: 0% 6px 0 0;
+  }
+  
+  .navbar .navbar-collapse .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.899);
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .navbar .navbar-collapse .nav-item .nav-link:hover {
+    color: rgb(208, 255, 108);
+    transform: scale(1.5);
+  }
+  
+  @media (min-width : 300px) and (max-width:600px) {
+  
+    .navbar-brand {
+      margin-left: 0px;
+      font-weight: bold;
+      color: #fb8504;
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .navbar>.containe {
+      display: block;
+      margin: 0;
+    }
+  
+    .navbar .navbar-collapse .nav-item {
+      height: 30px;
+      width: 170px;
+      margin: auto;
+      text-align: center;
+      border-radius: 13rem;
+    }
+  
+    .navbar .navbar-collapse {
+      margin-right: 0%;
+      background: rgba(160, 217, 255, 0.264);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.426);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(35, 35, 35, 0.3);
+    z-index: 2000;
+  }
+  
+  
+  
+    .navbar .navbar-collapse .nav-item .nav-link {
+      color: rgba(0, 28, 62, 0.899);
+      font-size: 16px;
+    }
+  
+  
+  
+    #carousel-inner #carousel-item #img {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+  
+  /* navbar end */
+  
+
+
+/* img */
+
+.imgBox {
+    /* margin-top: 70px; */
+    padding: 80px 20px 20px 20px;
+    background-color: rgb(40, 172, 254);
 }
+
+.imgBox .photoss {
+    padding: 10px 30px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius:  1.5rem  1.5rem  0rem 0rem;
+}
+
+.imgBox .photoss .boxx {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+
+.imgBox .photoss .boxx .container{
+    margin: 0;
+    padding: 0;
+    /* background-color: #fb8504; */
+    cursor: pointer;
+}
+
+.imgBox .photoss .boxx .container:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.781);
+    /* transform: scale(1.3); */
+    z-index: 1000;
+    }
+
+.imgBox .photoss .boxx .container h5{
+   text-align: center;
+font-size: 1rem;
+padding: 89px 50px 0px 50px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .imgBox .photoss .boxx {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+    }
+
+    .imgBox .photoss .boxx .container h5{
+      text-align: center;
+      font-size: .6rem;
+      padding: 20px;
+    }
+  }
+
+
+  /* landingPage css */
+ 
+.wrapper{
+    height: 100vh;
+    background: url("./img/topimg2.jpg");
+    background-size: cover;
+}
+
+
+.name{
+   padding-top: 9rem;
+    color:white;
+    z-index: 20;
+    font-size: 6rem;
+    text-shadow: 4px 5px 12px gray;
+    font-family: 'Russo One', sans-serif; 
+    text-align: center;
+}
+.overimage{
+    position: absolute;
+    width: 34rem;
+    height: 37rem;
+    z-index: 30;
+    top: 20%;
+    left: 55%;
+}
+
+
+/* description section  */
+.descriptionSection{
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.descriptionSection .description{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.781);
+    color: #00ff15;
+    border-radius: 2rem 0 2rem 0;
+    padding: 20px 30px;
+    text-align: center;
+    width: 50%;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* image slider  */
+.img-slidder{
+    height: 80vh;
+    margin-bottom: 10rem;
+}
+
+.d-block{
+    width: 95vw;
+    height:90vh;
+    margin: auto;
+}
+
+
+/* landingPage end */
+
+/* choose page */
+
+.chooseitem .headingChoose h1{
+    text-align: center;
+    margin: 60px 0;
+    font-size: 3rem;
+    color: rgb(255, 38, 0);
+
+}
+
+.chooseitem{
+    padding: 20px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.card{
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    
+}
+
+.card:hover{
+/* scale: 1.1; */
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.483);
+z-index: 1000;
+}
+
+.secComponent{
+    padding: 10px 30px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.secComponent .firstDiv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.heading{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+.paragraph{
+    text-align: center;
+    width: 25rem;
+    font-size: larger;
+}
+
+/* choose end */
+
+
+
+/* footer */
+.footer{
+    background-color: black;
+    display: flex;
+    /* margin-top: -12rem; */
+    /* height: 21rem; */
+    padding-bottom: 6rem;
+}
+.logo{
+    width: 10rem;
+    margin: 4rem;
+}
+.logoset{
+    position: relative;
+}
+.logoname{
+    position: absolute;
+    color: white;
+    top: 95%;
+    font-weight: 700;
+    left: 5rem;
+}
+.logoDescription{
+    position: absolute;
+    top: 104%;
+    left: 3.7rem;
+    color: rgb(173, 170, 170);
+}
+.footersec{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.part1{
+    margin: 5rem;
+}
+.mainhead{
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+#subtopic{
+    color: white;
+    padding-top: 0.3rem;
+    transition: all;
+    transition-duration: 900ms;
+    scale: 1;
+}
+#subtopic:hover {
+    color:gray;
+    cursor: pointer;
+    text-decoration: underline;
+    scale: 1.2;
+}
+
+/* choose end */
